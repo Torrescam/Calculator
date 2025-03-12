@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #212529;
+  font-family: "Roboto Mono", monospace;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #343a40;
+  margin: 100px auto;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 15px;
+}
+
+#display {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: flex-end;
+  height: 150px;
+  margin-bottom: 30px;
+  padding: 10px 30px;
+  background-color: #343a40;
+  border-radius: 15px;
+}
+
+#display-text {
+  width: 100%;
+  text-align: right;
+  font-size: 30px;
+  color: #f8f9fa;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+.buttons-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  justify-content: center;
+  align-items: stretch;
+  margin-bottom: 20px;
+}
+
+.buttons-container button {
+  width: 100%;
+  height: 100px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  border: none;
+}
+
+.buttons-container .add {
+  grid-row: span 3;
+  height: 300px;
+  border-radius: 45px;
+}
+
+.clear,
+.plus-minus,
+.percentage {
+  background-color: #6c757d;
+  color: #ffffff;
+}
+
+.add,
+.equal,
+.divide,
+.multiply,
+.subtract {
+  background-color: #fca311;
+  color: #ffffff;
+}
+
+.numbers {
+  background-color: #343a40;
+  color: #ffffff;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:hover {
+  opacity: 0.8;
+}
