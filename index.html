@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="display"><span id="display-text">0</span></div>
+      <div class="buttons-container">
+        <button class="clear"><span>AC</span></button>
+        <button class="percentage operator" data-operator="%">
+          <span>&#37;</span>
+        </button>
+        <button class="divide operator" data-operator="/">
+          <span>&#247;</span>
+        </button>
+        <button class="multiply operator" data-operator="*">
+          <span>&#215;</span>
+        </button>
+        <button class="numbers" data-number="7">7</button>
+        <button class="numbers" data-number="8">8</button>
+        <button class="numbers" data-number="9">9</button>
+        <button class="subtract operator" data-operator="-">
+          <span>&#8722;</span>
+        </button>
+        <button class="numbers" data-number="4">4</button>
+        <button class="numbers" data-number="5">5</button>
+        <button class="numbers" data-number="6">6</button>
+
+        <button class="add operator" data-operator="+">
+          <span>&#43;</span>
+        </button>
+
+        <button class="numbers" data-number="1">1</button>
+        <button class="numbers" data-number="2">2</button>
+        <button class="numbers" data-number="3">3</button>
+        <button class="numbers" data-number="0">0</button>
+        <button class="numbers" data-type="decimal">.</button>
+        <button class="equal" id="result">
+          <span>&#61;</span>
+        </button>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
