@@ -16,36 +16,41 @@
     <div class="container">
       <div id="display"><span id="display-text">0</span></div>
       <div class="buttons-container">
-        <button class="clear"><span>AC</span></button>
-        <button class="percentage operator" data-operator="%">
+        <button class="calculator-button clear btn-func">
+          <span>AC</span>
+        </button>
+        <button class="calculator-button backspace btn-func">
+          <span>DEL</span>
+        </button>
+        <button class="calculator-button btn-func operator" data-operator="%">
           <span>&#37;</span>
         </button>
-        <button class="divide operator" data-operator="/">
+        <button class="calculator-button btn-op operator" data-operator="/">
           <span>&#247;</span>
         </button>
-        <button class="multiply operator" data-operator="*">
+        <button class="calculator-button numbers" data-number="7">7</button>
+        <button class="calculator-button numbers" data-number="8">8</button>
+        <button class="calculator-button numbers" data-number="9">9</button>
+        <button class="calculator-button btn-op operator" data-operator="*">
           <span>&#215;</span>
         </button>
-        <button class="numbers" data-number="7">7</button>
-        <button class="numbers" data-number="8">8</button>
-        <button class="numbers" data-number="9">9</button>
-        <button class="subtract operator" data-operator="-">
+        <button class="calculator-button numbers" data-number="4">4</button>
+        <button class="calculator-button numbers" data-number="5">5</button>
+        <button class="calculator-button numbers" data-number="6">6</button>
+        <button class="calculator-button btn-op operator" data-operator="-">
           <span>&#8722;</span>
         </button>
-        <button class="numbers" data-number="4">4</button>
-        <button class="numbers" data-number="5">5</button>
-        <button class="numbers" data-number="6">6</button>
-
-        <button class="add operator" data-operator="+">
+        <button class="calculator-button numbers" data-number="1">1</button>
+        <button class="calculator-button numbers" data-number="2">2</button>
+        <button class="calculator-button numbers" data-number="3">3</button>
+        <button class="calculator-button btn-op operator" data-operator="+">
           <span>&#43;</span>
         </button>
-
-        <button class="numbers" data-number="1">1</button>
-        <button class="numbers" data-number="2">2</button>
-        <button class="numbers" data-number="3">3</button>
-        <button class="numbers" data-number="0">0</button>
-        <button class="numbers" data-type="decimal">.</button>
-        <button class="equal" id="result">
+        <button class="calculator-button numbers btn-zero" data-number="0">
+          0
+        </button>
+        <button class="calculator-button decimal" data-type=".">.</button>
+        <button class="calculator-button btn-op equal" id="result">
           <span>&#61;</span>
         </button>
       </div>
