@@ -12,30 +12,38 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  border: 2px solid #343a40;
+  background-color: #1e1e1e;
   margin: 100px auto;
   width: 90%;
-  max-width: 500px;
+  max-width: 400px;
   border-radius: 15px;
+  padding: 20px;
+  animation: fadeIn 0.4s ease-in;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
 }
 
 #display {
   display: flex;
-  flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
+  /* flex-direction: column; */
   align-items: flex-end;
-  height: 150px;
+  height: 120px;
+  padding: 10px 20px;
   margin-bottom: 30px;
   padding: 10px 30px;
-  background-color: #343a40;
+  background-color: #000000;
   border-radius: 15px;
+  margin-bottom: 20px;
 }
 
 #display-text {
+  font-family: "Share Tech Mono", monospace;
   width: 100%;
   text-align: right;
-  font-size: 30px;
-  color: #f8f9fa;
+  width: 100%;
+  font-size: 42px;
+  letter-spacing: 2px;
+  color: #f9f9f9;
   word-wrap: break-word;
   overflow: hidden;
 }
@@ -43,52 +51,90 @@ body {
 .buttons-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 5px;
-  justify-content: center;
+  gap: 10px;
+  padding: 0 20px;
   align-items: stretch;
-  margin-bottom: 20px;
+  justify-content: center;
 }
 
-.buttons-container button {
-  width: 100%;
-  height: 100px;
-  border-radius: 50%;
-  font-size: 24px;
-  cursor: pointer;
+.calculator-button {
+  width: 60px;
+  height: 60px;
   border: none;
+  font-size: 24px;
+  border-radius: 50%;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.7), 0 8px 10px rgba(0, 0, 0, 0.3);
 }
 
-.buttons-container .add {
-  grid-row: span 3;
-  height: 300px;
-  border-radius: 45px;
+
+.calculator-button:active {
+  transform: translateY(2px);
+  box-shadow: 
+    inset 0 2px 4px rgba(255, 255, 255, 0.15), /* luz interior */
+    inset 0 -1px 1px rgba(0, 0, 0, 0.2);       /* un toque de sombra interna oscura */
+  filter: brightness(1.05);
 }
 
-.clear,
-.plus-minus,
-.percentage {
-  background-color: #6c757d;
+.btn-op {
+  background-color: #c99c33;
   color: #ffffff;
 }
 
-.add,
-.equal,
-.divide,
-.multiply,
-.subtract {
-  background-color: #fca311;
+.numbers,
+.decimal {
+  background-color: #3b3b3b;
   color: #ffffff;
 }
 
-.numbers {
-  background-color: #343a40;
-  color: #ffffff;
+.btn-func {
+  background-color: #505050;
+  color: #dee2e6;
+  font-size: 20px;
 }
 
-button:active {
-  transform: scale(0.95);
+.btn-zero {
+  width: 138px;
+  border-radius: 999px;
+  grid-column: span 2;
+  justify-self: start;
 }
 
-button:hover {
-  opacity: 0.8;
+.calculator-button:hover {
+  filter: brightness(1.1);
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 600px;
+    padding: 50px;
+  }
+
+  .calculator-button {
+    width: 99px;
+    height: 99px;
+  }
+
+  .numbers,
+  .decimal {
+    font-size: 40px;
+  }
+
+  .btn-op {
+    font-size: 40px;
+  }
+
+  .btn-func {
+    font-size: 30px;
+  }
+
+  .btn-zero {
+    width: 220px;
+    border-radius: 999px;
+    grid-column: span 2;
+    justify-self: start;
+    margin-left: 1px;
+  }
 }
